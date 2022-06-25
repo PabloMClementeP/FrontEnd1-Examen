@@ -1,10 +1,114 @@
+/* Variables */
+:root{
+    --rojo-brillante: rgb(242, 95, 58);
+    --azul-oscuro: rgb(35, 44, 81);
+    --azul-grisaceo-oscuro: rgb(143, 148, 167);
+    --azul-muy-oscuro: rgb(29, 30, 37);
+    --rojo-muy-palido: rgb(255, 239, 234);
+    --variante-gris-claro: rgb(249, 249, 249);
+}
+
+/* Reset de estilos */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+li{
+    list-style: none;
+}
 
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos comunes */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.button{
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.b-orange{
+    background-color: var(--rojo-brillante);
+    color: white;
+}
+
+.b-white{
+    background-color: white;
+    color: var(--rojo-brillante);
+}
+
+
+
+/* Estilos Generales */
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+}
+
+/* -- HEADER -- */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 25px;
+}
+
+.logo-header{
+    width: 35%;
+    height: 100%;
+}
+
+.navegacion{
+    display: none;
+}
+
+
+/* -- MAIN -- */
+
+/* Seccion Graficos */
+.graphics{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.graphics__text{
+    text-align: center;
+}
+
+.graphics__text h2{
+    font-size: 2.1rem;
+    color: var(--azul-oscuro);
+    font-weight: 700;
+}
+
+.graphics__text p{
+    color: var(--azul-grisaceo-oscuro);
+    font-weight: 500;
+    font-size: .9rem;
+    line-height: 1.5;
+    margin: 25px;
+}
+
+.graphics__text a {
+    margin-top: 50px;
+}
+
+/* -- FOOTER -- */
 
 
 
