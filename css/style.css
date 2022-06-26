@@ -33,10 +33,11 @@ img{
     width: 90%;
     margin: 0 auto;
     margin-bottom: 80px;
+    margin-top: 80px;
 }
 
 .button{
-    padding: 15px 30px;
+    padding: 15px 35px;
     border-radius: 40px;
     font-size: .7rem;
     font-weight: 500;
@@ -58,13 +59,19 @@ img{
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
+
+/****************/
 /* -- HEADER -- */
+/****************/
+
 header{
     display: flex;
     justify-content: space-between;
-    padding: 50px 25px;
+    padding: 40px 25px;
 }
 
 .logo-header{
@@ -76,8 +83,9 @@ header{
     display: none;
 }
 
-
+/**************/
 /* -- MAIN -- */
+/**************/
 
 /* Seccion Graficos */
 .graphics{
@@ -98,17 +106,84 @@ header{
 
 .graphics__text p{
     color: var(--azul-grisaceo-oscuro);
-    font-weight: 500;
+    font-weight: 400;
     font-size: .9rem;
-    line-height: 1.5;
+    line-height: 2;
     margin: 25px;
 }
 
 .graphics__text a {
-    margin-top: 50px;
+    position: relative;
+    top: 20px;
 }
 
+/* Seccion Differences */
+.differences{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.differences__text{
+    text-align: center;
+}
+
+.differences__text h2{
+    color: var(--azul-oscuro);
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 0 25px;
+}
+
+.differences__text p{
+    color: var(--azul-grisaceo-oscuro);
+    font-weight: 400;
+    font-size: .9rem;
+    line-height: 2;
+    margin: 0 25px;
+}
+
+/* Differences List */
+.differences__list{
+    margin-top: 30px;
+}
+
+.differences__list p{
+    line-height: 2;
+    font-size: .9rem;
+
+}
+
+.differences__list p:first-of-type{
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    background-color: var(--rojo-muy-palido);
+    padding: 10px 0;
+    margin: 25px 0 15px 15px;
+    border-radius: 20px 0 0 20px;
+}
+
+.differences__list p:first-of-type span{
+    color: white;
+    background-color: var(--rojo-brillante);
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.differences__list p:nth-child(2){
+    color: var(--azul-grisaceo-oscuro);
+    padding: 0 15px;
+}
+
+
+
+
+
+/****************/
 /* -- FOOTER -- */
+/****************/
 
 
 
