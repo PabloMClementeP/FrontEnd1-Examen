@@ -15,6 +15,10 @@
     margin: 0;
 }
 
+h2{
+    color: var(--azul-oscuro);
+}
+
 li{
     list-style: none;
 }
@@ -100,7 +104,6 @@ header{
 
 .graphics__text h2{
     font-size: 2.1rem;
-    color: var(--azul-oscuro);
     font-weight: 700;
 }
 
@@ -130,7 +133,6 @@ header{
 }
 
 .differences__text h2{
-    color: var(--azul-oscuro);
     font-size: 1.8rem;
     font-weight: 700;
     padding: 0 25px;
@@ -159,7 +161,7 @@ header{
     color: var(--azul-oscuro);
     font-weight: 700;
     background-color: var(--rojo-muy-palido);
-    padding: 10px 0;
+    padding: 6px 0;
     margin: 25px 0 15px 15px;
     border-radius: 20px 0 0 20px;
 }
@@ -167,7 +169,7 @@ header{
 .differences__list p:first-of-type span{
     color: white;
     background-color: var(--rojo-brillante);
-    padding: 15px 30px;
+    padding: 12px 25px;
     border-radius: 25px;
     margin-right: 10px;
 }
@@ -178,16 +180,88 @@ header{
 }
 
 
+/* Seccion Testimonials */
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.testimonial__cards div:nth-child(odd){
+    display: none;
+}
+
+.testimonial__cards_card{
+    background-color: var(--variante-gris-claro);
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonial__cards_card img{
+    position: relative;
+    width: 100px;
+    bottom: 50px;
+}
+
+.testimonial__cards_card h4{
+    position: relative;
+    bottom: 25px;
+}
+
+.testimonial__cards_card p{
+    color: var(--azul-grisaceo-oscuro);
+    line-height: 2;
+    font-size: .9rem;
+    padding-bottom: 25px;
+}
+
+.dots{
+    display: flex;
+}
+
+.dots div{
+    width: 10px;
+    height: 10px;
+    border: solid 1.8px var(--rojo-brillante);
+    border-radius: 50%;
+    margin: 30px 3px 60px 3px;
+}
+
+.dots div:nth-child(2){
+    background-color: var(--rojo-brillante);
+}
+
+/* .testimonial a{
+    margin-top: 25px;
+} */
+
 
 
 
 /****************/
 /* -- FOOTER -- */
 /****************/
+footer{
+    margin-top: 50px;
+}
+.orangeFooter{
+    background-color: var(--rojo-brillante);
+}
 
+.blackFooter{
+    display: flex;
+    flex-direction: column-reverse;
+}
 
-
-
+.icons__logo{
+    width: 50%;
+}
 
 
 /* @media (min-width: 420px){
