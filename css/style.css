@@ -27,6 +27,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    cursor: hand;
+}
+
 img{
     width: 100%;
     height: auto;
@@ -63,6 +67,10 @@ img{
 body{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 16px;
+}
+
+
+main{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -79,19 +87,68 @@ header{
 }
 
 .logo-header{
-    width: 35%;
+    width: 150px;
     height: 100%;
+    align-self: center;
 }
 
 .navegacion{
     display: none;
 }
 
+header>a{
+    display: none;
+}
+
+
+/* -------------------------- */
+/*     Media query Header     */
+/* -------------------------- */
+
+@media (min-width: 375px){
+    
+    body{
+        /* background-color: bisque; */
+    }
+}
+
+@media (min-width: 760px){
+
+    .navegacion{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+    
+    .navegacion ul{
+        display: flex;
+        margin-right: 15px;
+    }
+
+    .navegacion ul a{
+        color: var(--azul-oscuro);
+        font-size: .8rem;
+        font-weight: 500;
+        margin-right: 25px;
+    }
+
+    header>a{
+        display: block;
+    }
+
+    .menu-hamburguesa{
+        display: none;
+    }
+}
+
+
+
 /**************/
 /* -- MAIN -- */
 /**************/
 
-/* Seccion Graficos */
+/* Seccion Graphics */
 .graphics{
     display: flex;
     flex-direction: column-reverse;
@@ -120,6 +177,40 @@ header{
     top: 20px;
 }
 
+/* ---------------------------- */
+/* Media query Seccion Graphics */
+/* ---------------------------- */
+
+@media (min-width: 760px){
+    
+   .graphics{
+    flex-direction: row;
+    }
+
+    .graphics__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: start;
+        padding: 0 100px;
+    }
+
+    /* .graphics__text a{
+        align-self: auto;
+        justify-self: start;
+    } */
+
+    .graphics__text p{
+        margin: 0px;
+        padding-right: 50px;
+    }
+}
+
+
+
+
+
 /* Seccion Differences */
 .differences{
     margin-top: 120px;
@@ -146,6 +237,7 @@ header{
     margin: 0 25px;
 }
 
+
 /* Differences List */
 .differences__list{
     margin-top: 30px;
@@ -154,7 +246,6 @@ header{
 .differences__list p{
     line-height: 2;
     font-size: .9rem;
-
 }
 
 .differences__list p:first-of-type{
@@ -180,6 +271,45 @@ header{
 }
 
 
+
+/* ------------------------------- */
+/* Media query Seccion Differences */
+/* ------------------------------- */
+@media (min-width: 760px){
+    .differences{
+        flex-direction: row;
+    }
+
+    .differences__text{
+        text-align: start;
+    }
+
+    .differences__text h2{
+        margin-bottom: 40px;
+    }
+
+    .differences__text p{
+        margin-right: 80px;
+    }
+
+    .differences__list{
+        margin-top: 0px;
+    }
+
+    .differences__list p:first-of-type{
+        color: var(--azul-oscuro);
+        background-color: white;
+        margin: 0 0 15px 15px;
+    }
+
+    .differences__list_item{
+        margin: 25px 0;
+        padding: 0 50px;
+    }
+}
+
+
+
 /* Seccion Testimonials */
 .testimonial{
     display: flex;
@@ -190,6 +320,7 @@ header{
 .testimonial h2{
     font-size: 1.8rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .testimonial__cards div:nth-child(odd){
@@ -235,6 +366,24 @@ header{
 
 .dots div:nth-child(2){
     background-color: var(--rojo-brillante);
+}
+
+/* -------------------------------- */
+/* Media query Seccion Testimonials */
+/* -------------------------------- */
+@media (min-width: 760px){
+    .testimonial__cards div:nth-child(odd){
+        display: block;
+    }
+
+    .testimonial__cards{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .testimonial__cards_card{
+        margin: 50px 20px;
+    }
 }
 
 
@@ -308,20 +457,25 @@ footer{
 
 
 .suscribe{
+    padding: 50px 5px;
+}
+
+.suscribe form{
     display: flex;
     justify-content: center;
-    padding: 50px 5px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .suscribe input{
     padding: 10px 25px;
     border-radius: 25px;
+    border: none;
 }
 
 .suscribe input:nth-child(2){
     padding: 10px 35px;
     background-color: var(--rojo-brillante);
-    border: none;
     color: white;
 }
 
@@ -334,12 +488,65 @@ footer p{
 }
 
 
-/* @media (min-width: 420px){
-    .navegacion{
+/* ------------------ */
+/* Media query Footer */
+/* ------------------ */
+
+@media (min-width: 760px){
+    .orangeFooter{
         display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .orangeFooter h2{
+        text-align: start;
+        padding-right: 50px;
+        margin-bottom: 0;
     }
 
-    .menu-hamburguesa{
-        display: none;
+    .blackFooter{
+        flex-direction: row;
+        justify-content: space-around;
     }
-} */
+
+    .nav-footer{
+        justify-content: space-between;
+    }
+
+    .nav-footer nav{
+        margin: 0 40px;
+    }
+
+    .icons{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .icons__social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons__social{
+        padding: 5px;
+    }
+    
+    .icons__social img{
+        width: 30px;
+        margin: 0 10px;
+    }
+    
+    .icons__logo{
+        width: 80%;
+    }
+
+    footer p{
+        display: inline;
+        text-align: end;
+        padding-right: 150px;
+    }
+
+}
