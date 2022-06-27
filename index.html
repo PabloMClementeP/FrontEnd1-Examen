@@ -17,13 +17,18 @@
   </head>
   <body>
 
-    <!-- HEADER -->
-    <header>
+    <!-- Svg background -->
+    <div class="bg-svg"></div>
+
+      
+      
+      <!-- HEADER -->
+      <header>
       <img src="img/logo.svg" alt="Logo manage" class="logo-header"/>
 
       <!-- menu hamburgesa -->
       <div class="menu-hamburguesa">
-        <img src="img/icon-hamburger.svg" alt="" />
+        <a href="#"><img src="img/icon-hamburger.svg" alt="Menu hamburgesa para moviles" /></a>
       </div>
 
       <!-- links de navegación y boton -->
@@ -48,6 +53,7 @@
 
         <!-- Section Bring to build & Graphics  -->
         <section class="graphics container">
+            
             <div class="graphics__text">
                 <h2>Bring everyone together to build better products.</h2>
                 <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the large team goals in view </p>
@@ -130,6 +136,7 @@
         <div class="orangeFooter">
             <h2>Simplify how your team words today.</h2>
             <a href="#" class="button b-white">Get Started</a>
+            <div class="svg-orange"></div>
         </div>
 
         <!-- Seccion del Footer con fondo negro -->
@@ -186,8 +193,9 @@
             <!-- Formulario update -->
             <div class="suscribe">
                 <form action="#">
-                    <input type="text" placeholder="Update in your inbox..." required>
-                    <input type="button" value="Go">
+                    <input type="email" placeholder="Update in your inbox..." name="email" id="email" required>
+                    <button type="submit">Go</button>
+                    <!-- <input type="button" value="Go"> -->
                 </form>
             </div>
 

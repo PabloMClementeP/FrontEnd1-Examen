@@ -1,4 +1,8 @@
-/* Variables */
+
+/************************/
+/*       Variables      */
+/************************/
+
 :root{
     --rojo-brillante: rgb(242, 95, 58);
     --azul-oscuro: rgb(35, 44, 81);
@@ -8,7 +12,25 @@
     --variante-gris-claro: rgb(249, 249, 249);
 }
 
-/* Reset de estilos */
+/************************/
+/*   Estilos Generales  */
+/************************/
+
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+}
+
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/************************/
+/*   Reset de estilos   */
+/************************/
 *{
     box-sizing: border-box;
     padding: 0;
@@ -29,14 +51,21 @@ a{
 
 a:hover{
     cursor: hand;
+    transition: all .3s ease-in-out;
+    opacity: .6;
 }
+
 
 img{
     width: 100%;
     height: auto;
 }
 
-/* Estilos comunes */
+
+/************************/
+/*   Estilos comunes    */
+/************************/
+
 .container{
     width: 90%;
     margin: 0 auto;
@@ -54,6 +83,7 @@ img{
 .b-orange{
     background-color: var(--rojo-brillante);
     color: white;
+    box-shadow: 0 10px 25px -5px var(--rojo-brillante);
 }
 
 .b-white{
@@ -63,16 +93,41 @@ img{
 
 
 
-/* Estilos Generales */
-body{
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 16px;
+/************************/
+/* -- SVG Background -- */
+/************************/
+
+.bg-svg{
+    position: absolute;
+    width: 360px;
+    height: 550px;
+    top: 0;
+    right: 0;
+    z-index: -5;
+    background-image: url("../img/bg-tablet-pattern.svg");
+    background-size: cover;
+    background-repeat: repeat;
+    animation: bgScale 4s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
 }
 
+@keyframes bgScale{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+        top: 30px;
+        right: 50px;
+    }
+}
 
-main{
-    max-width: 1440px;
-    margin: 0 auto;
+@media (min-width: 760px){
+    .bg-svg{
+        width: 500px;
+        height: 600px;
+    }
 }
 
 
@@ -101,18 +156,17 @@ header>a{
 }
 
 
+
+
 /* -------------------------- */
 /*     Media query Header     */
 /* -------------------------- */
 
-@media (min-width: 375px){
-    
-    body{
-        /* background-color: bisque; */
-    }
-}
-
 @media (min-width: 760px){
+    header{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 
     .navegacion{
         display: flex;
@@ -195,11 +249,6 @@ header>a{
         text-align: start;
         padding: 0 100px;
     }
-
-    /* .graphics__text a{
-        align-self: auto;
-        justify-self: start;
-    } */
 
     .graphics__text p{
         margin: 0px;
@@ -315,12 +364,14 @@ header>a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
 }
 
 .testimonial h2{
     font-size: 1.8rem;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .testimonial__cards div:nth-child(odd){
@@ -368,6 +419,10 @@ header>a{
     background-color: var(--rojo-brillante);
 }
 
+.testimonial a{
+    margin-bottom: 40px;
+}
+
 /* -------------------------------- */
 /* Media query Seccion Testimonials */
 /* -------------------------------- */
@@ -404,6 +459,7 @@ footer{
     text-align: center;
     background-color: var(--rojo-brillante);
     padding: 100px 20px;
+    position: relative;
 }
 
 .orangeFooter h2{
@@ -412,6 +468,19 @@ footer{
     font-size: 2.5rem;
     margin-bottom: 25px;
 }
+
+.svg-orange{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 200;
+    left: 0;
+    z-index: 5;
+    background-image: url("../img/bg-simplify-section-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .blackFooter{
     display: flex;
@@ -471,12 +540,21 @@ footer{
     padding: 10px 25px;
     border-radius: 25px;
     border: none;
+    margin: 0 10px;
 }
 
-.suscribe input:nth-child(2){
+.suscribe button{
     padding: 10px 35px;
     background-color: var(--rojo-brillante);
     color: white;
+    border-radius: 25px;
+    border: none;
+}
+
+.suscribe button:hover{
+    cursor: hand;
+    transition: all .3s ease-in-out;
+    opacity: .6;
 }
 
 footer p{
@@ -503,6 +581,11 @@ footer p{
         text-align: start;
         padding-right: 50px;
         margin-bottom: 0;
+    }
+
+    .svg-orange{
+        height: 180px;
+        top: 20px;
     }
 
     .blackFooter{
